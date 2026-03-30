@@ -25,7 +25,7 @@
 }
 
 .input:focus {
-    border-color: var(--accent);
+    border-color: var(--primary-1);
     outline: none;
-    box-shadow: 0 0 0 0.2rem var(--accent-bg);
+    box-shadow: 0 0 0 0.2rem var(--primary-4);
 }
