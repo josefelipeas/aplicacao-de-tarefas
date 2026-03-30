@@ -1,0 +1,31 @@
+.required {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    min-width: 200px;
+}
+
+::placeholder {
+    color: #999;
+}
+
+.input:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem var(--accent-bg);
+}
