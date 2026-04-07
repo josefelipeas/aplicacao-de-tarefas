@@ -1,0 +1,11 @@
+.home-banner {
+    width: 400px;
+    height: 200px;
+    margin-top: 50px;
+    border-radius: 6px;
+}
+
+.home-layout a {
+    display: inline-block;
+    margin-top: 20px;
+}
