@@ -1,16 +1,46 @@
-# React + Vite
+# To-do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de certificação DevStart Trilha React - Desafio 2 - Aplicação de Tarefas com Rotas, Estado, Efeito e Contexto.  
 
-Currently, two official plugins are available:
+Cria uma aplicação React que gerencia tarefas, utilizando rotas, estado, efeito e contexto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funcionalidades
 
-## React Compiler
+1. Context API para mostrar, adicionar, atualizar e deletar tarefas cadastradas pelos usuários, persistindo as informações no LocalStorage.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Utiliza Theme Context para salvar preferências de tema Light/Dark.
 
-## Expanding the ESLint configuration
+3. Aplicação responsiva para dispositivos móveis.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. Funcionalidades React utilizadas:
+    - useState para salvar o estado das tarefas e do tema.
+    - useContext para utilizar estes estados globalmente.
+    - useEffect para aplicar mudanças de tema e persistência dos estados no localStorage.
+    - BrowserRouter, Routes, Route, NavLink, Link do react-router-dom para navegação.
+    - Estilização com CSS puro.
+
+## Como executar
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/josefelipeas/aplicacao-de-tarefas.git
+```
+
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Para executar o projeto em ambiente de desenvolvimento
+```bash
+npm run dev
+```
+
+## Tecnologias utilizadas
+
+![React](https://img.shields.io/badge/react-gray?style=for-the-badge&logo=react
+)
+![Vite](https://img.shields.io/badge/vite-%239135FF?style=for-the-badge&logo=vite&logoColor=white
+)
+![Javascript](https://img.shields.io/badge/javascript-blue?style=for-the-badge&logo=javascript
+)
