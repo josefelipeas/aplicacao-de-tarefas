@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { ThemeContext } from "../context/ThemeContext";
 import "./Navbar.css";
 
 function Navbar() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <nav className="navbar">
       <div>
@@ -13,12 +17,12 @@ function Navbar() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/tasks">Tarefas</NavLink>
+            <NavLink to="/add-tasks">Adicionar Tarefas</NavLink>
           </li>
         </ul>
       </div>
       <label className="theme-toggle">
-        <input type="checkbox" id="theme-toggle" />
+        <input type="checkbox" id="theme-toggle" checked={theme} onChange={toggleTheme} />
         <span className="slider"></span>
       </label>
     </nav>

@@ -2,7 +2,7 @@ import "./Input.css";
 
 function Input(props) {
   const { placeholder, className, required, type = "text", ...rest } = props;
-  const classes = "input " + (className ? className : "");
+  const classes = "input" + (className ? ` ${className}` : "");
 
   return (
     <label className="label">

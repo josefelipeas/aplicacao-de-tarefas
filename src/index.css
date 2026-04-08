@@ -1,4 +1,5 @@
 :root {
+  /* Light Theme */
   --text: #6b6375;
   --text-h: #08060d;
   --white: #fff;
@@ -9,14 +10,23 @@
   --primary-3: #0052cc;
   --primary-4: #408fe4e8;
   --accent-border: rgba(0, 123, 255, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  /* Dark Theme */
+  --text-dark: #d1c9db;
+  --text-h-dark: #f0e9ff;
+  --white-dark: #0f0c17;
+  --border-dark: #3a3644;
+  --input-bg-dark: #1c1926;
+  --primary-1-dark: #4d9fff;
+  --accent-border-dark: rgba(77, 159, 255, 0.5);
+  --shadow-dark: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
+  font: 16px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -27,12 +37,27 @@
   -moz-osx-font-smoothing: grayscale;
 
   @media (max-width: 1024px) {
-    font-size: 16px;
+    font-size: 14px;
   }
+}
+
+html.dark {
+  --text: var(--text-dark);
+  --text-h: var(--text-h-dark);
+  --white: var(--white-dark);
+  --border: var(--border-dark);
+  --input-bg: var(--input-bg-dark);
+  --primary-1: var(--primary-1-dark);
+  --accent-border: var(--accent-border-dark);
+  --shadow: var(--shadow-dark);
 }
 
 body {
   margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 #root {
@@ -51,21 +76,21 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 40px;
   letter-spacing: -1.68px;
   margin: 32px 0;
   @media (max-width: 1024px) {
-    font-size: 36px;
+    font-size: 32px;
     margin: 20px 0;
   }
 }
 h2 {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 p {

@@ -1,11 +1,22 @@
-import { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import AddTarefas from "./pages/AddTarefas";
+import { AppProvider } from "./context/AppProvider";
 
 function App() {
   return (
-    <>
-      <h1>To do list</h1>
-    </>
+    <AppProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add-tasks" element={<AddTarefas />} />
+        </Routes>
+      </Router>
+    </AppProvider>
   );
 }
 

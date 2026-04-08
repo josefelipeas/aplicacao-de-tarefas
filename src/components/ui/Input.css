@@ -1,31 +1,66 @@
+/* ====================== REQUIRED ASTERISK ====================== */
 .required {
-    color: red;
-    margin-left: 0.25rem;
+    color: #ff4d4f;                    
+    margin-left: 0.1rem;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
-.label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    text-align: left;
-}
-
+/* ====================== INPUT FIELD ====================== */
 .input {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid var(--border);
-    border-radius: 4px;
+    padding: 12px 16px;                
+    border: 2px solid var(--border);
+    border-radius: 8px;
     font-size: 1rem;
     background-color: var(--input-bg);
+    color: var(--text-h);
+    transition: border-color 0.3s ease, 
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
+    outline: none;
     min-width: 200px;
+    font-family: var(--sans);
 }
 
-::placeholder {
-    color: #999;
+/* Placeholder */
+.input::placeholder {
+    color: #9ca3af;                    
+    opacity: 1;
 }
 
+/* Focus State */
 .input:focus {
     border-color: var(--primary-1);
-    outline: none;
-    box-shadow: 0 0 0 0.2rem var(--primary-4);
+    box-shadow: 0 0 0 4px var(--accent-border);
+}
+
+/* Hover State */
+.input:hover {
+    border-color: var(--primary-2);
+}
+
+/* ====================== DARK MODE ====================== */
+html.dark .required {
+    color: #ff6b6b;                    
+}
+
+html.dark .input {
+    color: var(--text);
+    background-color: var(--input-bg);
+    border-color: var(--border);
+}
+
+html.dark .input::placeholder {
+    color: #8b8f9c;
+}
+
+html.dark .input:focus {
+    border-color: var(--primary-1);
+    box-shadow: 0 0 0 4px rgba(77, 159, 255, 0.25);   
+}
+
+html.dark .input:hover {
+    border-color: var(--primary-1);
 }

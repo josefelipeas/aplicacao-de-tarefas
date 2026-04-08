@@ -1,29 +1,67 @@
 .btn {
-    padding: 10px 20px;
+    padding: 10px 24px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;                   
     background-color: var(--primary-1);
     color: white;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 200ms ease-in-out;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 200ms ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .btn:hover {
     background-color: var(--primary-3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.25);
 }
 
 .btn-text {
     font-weight: 500;
 }
 
+/* ====================== BOTÃO OUTLINE ====================== */
+
 .btn-outline {
     background-color: transparent;
     border: 2px solid var(--primary-1);
     color: var(--primary-1);
+    font-weight: 500;
 }
 
 .btn-outline:hover {
-    background-color: var(--primary-4);
+    background-color: var(--primary-1);
+    color: white;
+    border-color: var(--primary-1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
+}
+
+.btn-outline:active {
+    transform: translateY(0);
+}
+
+/* ====================== DARK MODE - BOTÕES ====================== */
+
+html.dark .btn {
+    box-shadow: 0 4px 12px rgba(77, 159, 255, 0.35);
+}
+
+html.dark .btn-outline {
+    color: var(--primary-1);
+    border-color: var(--primary-1);
+}
+
+html.dark .btn-outline:hover {
+    background-color: var(--primary-1);
     color: white;
 }

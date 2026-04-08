@@ -1,7 +1,7 @@
 import "./Button.css";
 
 function Button({ children, outline, className = "", ...props }) {
-  const classes = "btn " + className + (outline ? " btn-outline" : "");
+  const classes = "btn" + ` ${className}` + (outline ? " btn-outline" : "");
 
   return (
     <button className={classes} {...props}>

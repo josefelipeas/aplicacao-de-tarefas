@@ -1,172 +1,150 @@
-/* Modern CSS for AddTarefas form */
+/* ====================== TASK FORM ====================== */
 
 .task-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  gap: 0.5rem;
-  max-width: 700px;
-  margin: 1rem auto;
-  padding: 1rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border: 2px solid #e1e5e9;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;  
+    justify-content: center;
+    gap: 1.2rem;
+    max-width: 700px;
+    margin: 1.5rem auto;
+    padding: 1.75rem;
+    background: var(--white);
+    border-radius: 16px;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
 .task-form .form-field {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-  min-width: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+    min-width: 280px;
+    gap: 0.4rem;
 }
 
 .task-form .label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  color: var(--primary-1);
-  margin-bottom: 0;
-  font-size: 1rem;
-  text-align: left;
-  white-space: nowrap;
-  min-width: 0;
-  overflow: visible;
-  flex: 0 0 auto;
-}
-
-.task-form select {
-  width: 100%;
-  max-width: 280px;
-  flex: 1 1 280px;
-  min-width: 0;
-  padding: 0.75rem;
-  border: 2px solid #e1e5e9;
-  border-radius: 8px;
-  font-size: 1rem;
-  background-color: var(--input-bg);
-  color: var(--accent-border);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  outline: none;
-}
-
-.task-form .input {
-    width: 100%;
-    max-width: 280px;
-    flex: 1 1 280px;
-    min-width: 0;
-    padding: 0.75rem;
-}
-
-.task-form .input:hover {
-    border-color: #ccc;
-}
-.task-form .input::placeholder {
-    color: var(--accent-border);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    color: var(--text-h);
+    margin-bottom: 0;
     font-size: 1rem;
+    white-space: nowrap;
 }
 
-.task-form .label div {
+/* Inputs e Select */
+.task-form .input,
+.task-form select {
     width: 100%;
-    max-width: 280px;
-    flex: 1 1 280px;
-    min-width: 0;
-    margin-top: 0;
+    padding: 12px 16px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    color: var(--text-h);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
 }
 
-.task-form select:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-}
-
+.task-form .input:hover,
 .task-form select:hover {
-  border-color: #ccc;
+    border-color: var(--primary-2);
 }
 
+.task-form .input:focus,
+.task-form select:focus {
+    border-color: var(--primary-1);
+    box-shadow: 0 0 0 4px var(--accent-border);
+}
+
+.task-form .input::placeholder {
+    color: #9ca3af;
+}
+
+/* Botão */
 .task-form button {
-  margin-top: 0.5rem;
+    margin-top: 0.75rem;
+    padding: 13px 32px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .save-btn {
-  background: #28a745 !important;
+    background: #28a745 !important;
+    color: white;
+    border: none;
+    min-width: 200px;
 }
 
 .save-btn:hover {
-  background: #218838 !important;
+    background: #218838 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.35);
 }
 
 .cancel-btn {
-  background: #6c757d;
-  color: white;
-  border: none;
-  padding: 14px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-left: 8px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    margin-left: 10px;
 }
 
 .cancel-btn:hover {
-  background: #5a6268;
+    background: #5a6268;
 }
 
+/* ====================== DARK MODE ====================== */
+
+html.dark .task-form {
+    background: var(--white);
+    border-color: var(--border);
+}
+
+html.dark .label {
+    color: var(--text-h);
+}
+
+html.dark .input,
+html.dark select {
+    background-color: var(--input-bg);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+html.dark .input::placeholder {
+    color: #8b8f9c;
+}
+
+/* ====================== RESPONSIVO ====================== */
+
 @media (max-width: 760px) {
-  .task-form {
-    flex-direction: column;
-    align-items: stretch;
-  }
+    .task-form {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1.5rem;
+    }
 
-  .task-form .form-field,
-  .task-form button {
-    width: 100%;
-    max-width: none;
-  }
+    .task-form .form-field {
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
 
-  .task-form button {
-    margin-top: 0;
-  }
+    .task-form button {
+        margin-top: 1rem;
+        width: 100%;
+        max-width: none;
+    }
 
-  .task-form .form-field {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: nowrap;
-    position: relative;
-  }
-
-  .task-form .label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    width: auto;
-    flex: 0 0 auto;
-    min-width: 0;
-    margin-bottom: 0;
-    white-space: nowrap;
-  }
-
-  .task-form .label div {
-    width: 100%;
-    flex: 1 1 0;
-    min-width: 0;
-  }
-
-  .task-form .input,
-  .task-form select {
-    width: 100%;
-    max-width: none;
-    flex: 1 1 0;
-    min-width: 0;
-    margin: 0;
-  }
-
-  .cancel-btn {
-    margin-left: 0;
-    margin-top: 8px;
-  }
+    .cancel-btn {
+        margin-left: 0;
+        margin-top: 0.75rem;
+    }
 }

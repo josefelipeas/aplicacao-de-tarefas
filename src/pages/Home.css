@@ -1,11 +1,59 @@
 .home-banner {
-    width: 400px;
-    height: 200px;
-    margin-top: 50px;
-    border-radius: 6px;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-width: 420px;
+    height: 220px;
+    margin: 60px auto 30px;
+    border-radius: 16px;
+    overflow: hidden;                   
+    box-shadow: var(--shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background: var(--white);
+    border: 1px solid var(--border);
 }
 
+.home-banner:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Link abaixo do banner */
 .home-layout a {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 24px;
+}
+
+/* ====================== RESPONSIVO ====================== */
+
+@media (max-width: 1024px) {
+    .home-banner {
+        max-width: 380px;
+        height: 200px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-banner {
+        max-width: 100%;
+        height: 180px;
+        margin-top: 30px;
+        border-radius: 12px;
+    }
+
+    .home-layout a {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-banner {
+        height: 160px;
+        margin-top: 25px;
+    }
 }
