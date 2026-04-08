@@ -91,6 +91,29 @@
   margin-top: 0.5rem;
 }
 
+.save-btn {
+  background: #28a745 !important;
+}
+
+.save-btn:hover {
+  background: #218838 !important;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+}
+
 @media (max-width: 760px) {
   .task-form {
     flex-direction: column;
@@ -140,5 +163,10 @@
     flex: 1 1 0;
     min-width: 0;
     margin: 0;
+  }
+
+  .cancel-btn {
+    margin-left: 0;
+    margin-top: 8px;
   }
 }
